@@ -111,15 +111,15 @@
   }
 
   // Serduszka
-  for (let i = 0; i < 30; i++) {
-    const heart = document.createElement('div');
-    heart.classList.add('heart');
-    heart.style.left = Math.random() * 100 + 'vw';
-    heart.style.animationDelay = Math.random() * 10 + 's';
-    heart.style.opacity = Math.random();
-    heart.style.scale = Math.random() * 1.5 + 0.5;
-    document.body.appendChild(heart);
-  }
+for (let i = 0; i < 30; i++) {
+  const heart = document.createElement('div');
+  heart.classList.add('heart');
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.animationDelay = Math.random() * 10 + 's';
+  heart.style.opacity = Math.random();
+  heart.style.transform = "scale(" + (Math.random() * 1.5 + 0.5) + ")"; // ✅ DOBRZE
+  document.body.appendChild(heart);
+}
 
   // Cytaty
   const quotes = [
